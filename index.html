@@ -7,24 +7,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | Jordan Patton</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400" />
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <style>
 html {}
 body {background:transparent url('img/background.png') repeat center center;}
 .content {text-align:center;}
-.content .greeting {}
-.content .greeting > h1 {margin-top:40px;font-family:'Open Sans',sans-serif;font-weight:700;text-shadow:1px 1px 1px rgba(51,122,183,1);}
+.content .flip-container {perspective:1000;width:247px;height:300px;margin:0 auto;}
+.content .flip-container > .flipper {position:relative;transition:0.6s;transform-style:preserve-3d;}
+.content .flip-container:hover > .flipper, .content .flip-container.hover > .flipper {transform:rotateY(180deg);}
+.content .flip-container > .flipper > .front {position:absolute;top:0;left:0;z-index:2;width:247px;height:300px;backface-visibility:hidden;transform:rotateY(0deg);}
+.content .flip-container > .flipper > .back  {position:absolute;top:0;left:0;z-index:1;width:247px;height:300px;backface-visibility:hidden;transform:rotateY(180deg);}
+.content .flip-container img {width:247px;height:300px;}
+.content .greeting {margin-top:20px;}
+@media (min-width:512px) {.content .greeting {margin-top:40px;}}
+.content .greeting > h1 {font-family:'Open Sans',sans-serif;font-weight:700;text-shadow:1px 1px 1px rgba(51,122,183,1);}
 .content .greeting > h1:first-child {margin-top:0;}
-.content .social {}
-.content .social > ul {list-style:none;margin-top:40px;padding:0;}
-.content .social > ul > li {display:inline-block;margin:0 8px;}
+.content .social {margin-top:20px;}
+@media (min-width:512px) {.content .social {margin-top:40px;}}
+.content .social > ul {list-style:none;margin:0;padding:0;}
+.content .social > ul > li {display:inline-block;width:70px;margin:auto;}
+@media (min-width:512px) {.content .social > ul > li {width:58px;}}
 .content .social > ul > li > a {color:rgba(51,122,183,1);}
 .content .social > ul > li > a:hover {color:rgba(183,112,51,1);}
     </style>
@@ -36,9 +39,18 @@ body {background:transparent url('img/background.png') repeat center center;}
         <div style="#position:absolute;#top:50%;display:table-cell;vertical-align:middle;" class="center-helper">
           <div style="#position:relative;#top:-50%;margin:0 auto;" class="center-content">
             <!--center-content...-->
+            <div class="flip-container" ontouchstart="javascript:this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <img src="img/photo-1.jpg" alt="Jordan Patton" />
+                </div>
+                <div class="back">
+                  <img src="img/photo-2.jpg" alt="Jordan Patton" />
+                </div>
+              </div>
+            </div>
             <div class="greeting">
-              <h1>Hello!&nbsp;&nbsp;&nbsp;&colon;&rpar;</h1>
-              <h1>I'm Jordan Patton.</h1>
+              <h1>Hi, I'm Jordan! &nbsp;&colon;&rpar;</h1>
             </div>
             <div class="social">
               <ul>
@@ -57,7 +69,5 @@ body {background:transparent url('img/background.png') repeat center center;}
       </div>
       <!--...center-wrap-->
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
