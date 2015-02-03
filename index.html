@@ -20,16 +20,19 @@ body {background:transparent url('img/background.png') repeat center center;}
 .content .flip-container > .flipper > .back  {position:absolute;top:0;left:0;z-index:1;width:247px;height:300px;backface-visibility:hidden;transform:rotateY(180deg);}
 .content .flip-container img {width:247px;height:300px;}
 .content .greeting {margin-top:20px;}
-@media (min-width:321px) {.content .greeting {margin-top:40px;}}
-.content .greeting > h1 {font-family:'Open Sans',sans-serif;font-weight:700;text-shadow:1px 1px 1px rgba(51,122,183,1);}
+.content .greeting > h1 {font-family:'Open Sans',sans-serif;font-size:24px;font-weight:700;text-shadow:1px 1px 1px rgba(51,122,183,1);}
 .content .greeting > h1:first-child {margin-top:0;}
 .content .social {margin-top:20px;}
-@media (min-width:321px) {.content .social {margin-top:40px;}}
 .content .social > ul {list-style:none;margin:0;padding:0;}
 .content .social > ul > li {display:inline-block;width:70px;margin:auto;}
-@media (min-width:321px) {.content .social > ul > li {width:40px;}}
 .content .social > ul > li > a {color:rgba(51,122,183,1);}
 .content .social > ul > li > a:hover {color:rgba(183,112,51,1);}
+@media (min-width:321px) {
+  .content .greeting {margin-top:40px;}
+  .content .greeting > h1 {font-size:32px;}
+  .content .social {margin-top:40px;}
+  .content .social > ul > li {width:40px;}
+}
     </style>
   </head>
   <body>
