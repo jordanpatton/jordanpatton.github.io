@@ -4,32 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Home | Jordan Patton</title>
+    <meta name="description" content="Jordan Patton's Personal Website">
+    <meta name="author" content="Jordan Patton">
+    <title>Jordan Patton</title>
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400" />
-    <style>
-html {}
-body {background:transparent url('img/background.png') repeat center center;}
-.content {text-align:center;}
-.content .flip-container {perspective:1000;width:247px;height:300px;margin:0 auto;}
-.content .flip-container > .flipper {position:relative;transition:0.6s;transform-style:preserve-3d;}
-.content .flip-container:hover > .flipper, .content .flip-container.hover > .flipper {transform:rotateY(180deg);}
-.content .flip-container > .flipper > .front {position:absolute;top:0;left:0;z-index:2;width:247px;height:300px;backface-visibility:hidden;transform:rotateY(0deg);}
-.content .flip-container > .flipper > .back  {position:absolute;top:0;left:0;z-index:1;width:247px;height:300px;backface-visibility:hidden;transform:rotateY(180deg);}
-.content .flip-container img {width:247px;height:300px;}
-.content .social {margin-top:20px;}
-.content .social > ul {list-style:none;margin:0;padding:0;}
-.content .social > ul > li {display:inline-block;width:70px;margin:auto;}
-.content .social > ul > li > a {color:#ffffff;}
-.content .social > ul > li > a:hover {color:#337ab7;}
-@media (min-width:321px) {
-  .content .social {margin-top:40px;}
-  .content .social > ul > li {width:40px;}
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
   <body>
     <div class="content">
@@ -38,14 +19,12 @@ body {background:transparent url('img/background.png') repeat center center;}
         <div style="#position:absolute;#top:50%;display:table-cell;vertical-align:middle;" class="center-helper">
           <div style="#position:relative;#top:-50%;margin:0 auto;" class="center-content">
             <!--center-content...-->
-            <div class="flip-container" ontouchstart="javascript:this.classList.toggle('hover');">
-              <div class="flipper">
-                <div class="front">
-                  <img src="img/photo-1.jpg" alt="Jordan Patton" />
-                </div>
-                <div class="back">
-                  <img src="img/photo-2.jpg" alt="Jordan Patton" />
-                </div>
+            <div class="photo flip-card" ontouchstart="javascript:this.classList.add('hover');" ontouchend="javascript:this.classList.remove('hover');">
+              <div class="front">
+                <img src="img/photo-1.jpg" alt="Jordan Patton" />
+              </div>
+              <div class="back">
+                <img src="img/photo-2.jpg" alt="Jordan Patton" />
               </div>
             </div>
             <div class="social">
