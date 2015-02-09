@@ -1,7 +1,11 @@
 html {}
-body {background:transparent url('../img/background.png') repeat center center;}
+body {font-face:Helvetica,sans-serif;background:transparent url('../img/background.png') repeat center center;}
 .content {text-align:center;}
-.content .photo, .content .photo img {width:247px;height:300px;}
+.content .logo, .content .logo > .back > .message, .content .logo > .front > a > img {width:300px;height:300px;}
+.content .logo > .back > .message {overflow:hidden;background-color:transparent;}
+.content .logo > .back > .message > img {width:auto;height:150px;margin:18px 0 0 0;}
+.content .logo > .back > .message > p {margin:15px 0 0 0;color:#ffffff;font-size:14px;}
+.content .logo > .back > .message > p > a {color:#337ab7;}
 .content .social {margin-top:20px;}
 .content .social > ul {list-style:none;margin:0;padding:0;}
 .content .social > ul > li {display:inline-block;width:70px;margin:auto;}
@@ -11,6 +15,20 @@ body {background:transparent url('../img/background.png') repeat center center;}
   .content .social {margin-top:40px;}
   .content .social > ul > li {width:40px;}
 }
+
+
+/* BEGIN: Cross Fade ......................................... */
+.cross-fade {position:relative;margin:0 auto;}
+.cross-fade > .front, .cross-fade > .back {position:absolute;top:0;width:inherit;height:inherit;
+  -webkit-transition:opacity .5s ease-in-out;
+     -moz-transition:opacity .5s ease-in-out;
+      -ms-transition:opacity .5s ease-in-out;
+       -o-transition:opacity .5s ease-in-out;
+          transition:opacity .5s ease-in-out;
+}
+.cross-fade > .front:hover, .cross-fade > .front.hover {opacity:0;}
+/* END: Cross Fade ........................................... */
+
 
 /* BEGIN: Flip Card .......................................... */
 .flip-card {position:relative;margin:0 auto;

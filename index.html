@@ -27,12 +27,16 @@
         <div style="#position:absolute;#top:50%;display:table-cell;vertical-align:middle;" class="center-helper">
           <div style="#position:relative;#top:-50%;margin:0 auto;" class="center-content">
             <!--center-content...-->
-            <div class="photo flip-card" ontouchstart="javascript:this.classList.add('hover');" ontouchend="javascript:this.classList.remove('hover');">
-              <div class="front">
-                <img src="img/photo-1.jpg" alt="Jordan Patton" />
-              </div>
+            <div class="logo cross-fade">
               <div class="back">
-                <img src="img/photo-2.jpg" alt="Jordan Patton" />
+                <div class="message">
+                  <img src="img/photo-2.jpg" alt="Jordan Patton" />
+                  <p>Hi, I'm Jordan Patton! I'm a user experience researcher, designer, and developer. For a sample of my work, please see my <a href="http://portfolio.jordanpatton.com" title="Portfolio">portfolio</a>.</p>
+                  <p>(Contact me for the password.)</p>
+                </div>
+              </div>
+              <div class="front" ontouchstart="javascript:this.classList.add('hover');var self=this;window.setTimeout(function(){self.style.zIndex=-9999;},500);return false;">
+                <a href="http://portfolio.jordanpatton.com" title="Portfolio"><img src="img/logo-1.png" alt="Jordan Patton" /></a>
               </div>
             </div>
             <div class="social">
